@@ -17,11 +17,11 @@ jobs:
       - restore_cache:
           key: project-cache
       - run:
-        name: install cargo-make
-        command: which cargo-make || cargo install cargo-make
+          name: install cargo-make
+          command: which cargo-make || cargo install cargo-make
       - run:
-        name: ci flow
-        command: cargo make ci-flow
+          name: ci flow
+          command: cargo make ci-flow
       - save_cache:
           key: project-cache
           paths:
